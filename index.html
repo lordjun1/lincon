@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lincoln Phones & Accessories | Professional Phone Repairs in Kete Krachi</title>
+    <base target="_self">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#F59E0B',
+                        dark: '#1F2937',
+                        light: '#F3F4F6'
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'float': 'float 6s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .phone-shake {
+            animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-5px); }
+            40%, 80% { transform: translateX(5px); }
+        }
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(90deg, #3B82F6, #10B981);
+        }
+        .blob {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(120deg, rgba(59, 130, 246, 0.2) 0%, rgba(16, 185, 129, 0.2) 100%);
+            border-radius: 50%;
+            filter: blur(40px);
+            z-index: 0;
+        }
+        .service-card:hover .service-icon {
+            transform: rotateY(180deg);
+        }
+        .service-icon {
+            transition: transform 0.6s ease;
+        }
+        .stats-counter {
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="#" class="flex items-center">
+                            <img src="logo.png" alt="Lincoln Phones Logo" class="h-8 w-auto mr-2">
+                            <span class="text-xl font-bold text-gray-900 dark:text-white">Lincoln Phones</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="#services" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                        <a href="#pricing" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Pricing</a>
+                        <a href="#accessories" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Accessories</a>
+                        <a href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#testimonials" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Reviews</a>
+                        <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <button id="theme-toggle" class="p-2 rounded-full focus:outline-none">
+                        <i class="fas fa-moon text-gray-700 dark:text-yellow-300"></i>
+                    </button>
+                    <a href="tel:0549740645" class="ml-4 bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 flex items-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Call Now
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+            <div class="relative z-10 md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                        <span class="gradient-text">Phone Repairs</span> <br>Done Right in Kete Krachi
+                    </h1>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                        Fast, reliable, and affordable phone repairs for all major brands. We fix what others can't with same-day service and lifetime warranty on parts!
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition duration-300 text-center">
+                            Get a Free Quote
+                        </a>
+                        <a href="tel:0549740645" class="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-md font-medium transition duration-300 text-center flex items-center justify-center">
+                            <i class="fas fa-phone-alt mr-2"></i> 054 974 0645
+                        </a>
+                    </div>
+                    <div class="mt-8 flex items-center space-x-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-sm text-gray-600 dark:text-gray-300">Free Diagnostics</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-sm text-gray-600 dark:text-gray-300">Same-Day Service</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center relative">
+                    <div class="blob top-10 right-10"></div>
+                    <div class="blob bottom-10 left-10"></div>
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 z-10">
+                        <img src="https://images.unsplash.com/photo-1598128558393-70ff21433be0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                             alt="Phone repair" 
+                             class="w-full h-full object-contain animate-float">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-r from-blue-50 to-transparent dark:from-gray-800/50 -z-0"></div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-sm">
+                    <div class="text-4xl font-bold text-primary mb-2 stats-counter" data-target="2500">4k</div>
+                    <p class="text-gray-600 dark:text-gray-300">Phones Repaired</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-sm">
+                    <div class="text-4xl font-bold text-secondary mb-2 stats-counter" data-target="98">2k</div>
+                    <p class="text-gray-600 dark:text-gray-300">Success Rate</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-sm">
+                    <div class="text-4xl font-bold text-accent mb-2 stats-counter" data-target="45">30mins</div>
+                    <p class="text-gray-600 dark:text-gray-300">Minutes Avg. Repair</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-sm">
+                    <div class="text-4xl font-bold text-purple-500 mb-2 stats-counter" data-target="1200">3.4k</div>
+                    <p class="text-gray-600 dark:text-gray-300">Happy Customers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full mb-4">OUR SERVICES</span>
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Expert Phone Repair Services</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    We specialize in all types of phone repairs using high-quality parts and expert techniques.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto service-icon">
+                            <i class="fas fa-mobile-screen text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 text-center">Screen Replacement</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-center">
+                            Cracked screen? We replace screens for all phone models with OEM-quality parts.
+                        </p>
+                        <div class="mt-4 flex justify-center">
+                            <a href="#contact" class="text-primary text-sm font-medium hover:underline">Get Quote →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-4 mx-auto service-icon">
+                            <i class="fas fa-battery-full text-secondary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 text-center">Battery Replacement</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-center">
+                            Is your battery draining fast? We'll replace it with a high-capacity battery.
+                        </p>
+                        <div class="mt-4 flex justify-center">
+                            <a href="#contact" class="text-primary text-sm font-medium hover:underline">Get Quote →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4 mx-auto service-icon">
+                            <i class="fas fa-plug text-accent text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 text-center">Charging Port Repair</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-center">
+                            Phone not charging? We'll fix or replace your charging port quickly.
+                        </p>
+                        <div class="mt-4 flex justify-center">
+                            <a href="#contact" class="text-primary text-sm font-medium hover:underline">Get Quote →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mb-4 mx-auto service-icon">
+                            <i class="fas fa-camera text-purple-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 text-center">Camera Repair</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-center">
+                            Blurry or non-working camera? We'll get your photos looking sharp again.
+                        </p>
+                        <div class="mt-4 flex justify-center">
+                            <a href="#contact" class="text-primary text-sm font-medium hover:underline">Get Quote →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mb-4 mx-auto service-icon">
+                            <i class="fas fa-tint text-red-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 text-center">Water Damage Repair</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-center">
+                            Water-damaged phone? We'll dry it out and repair any damage.
+                        </p>
+                        <div class="mt-4 flex justify-center">
+                            <a href="#contact" class="text-primary text-sm font-medium hover:underline">Get Quote →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mb-4 mx-auto service-icon">
+                            <i class="fas fa-microchip text-green-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 text-center">Software Issues</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-center">
+                            Phone freezing or crashing? We'll diagnose and fix software problems.
+                        </p>
+                        <div class="mt-4 flex justify-center">
+                            <a href="#contact" class="text-primary text-sm font-medium hover:underline">Get Quote →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full mb-4">PROCESS</span>
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">How Our Repair Process Works</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Simple steps to get your phone fixed quickly and efficiently.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-sm relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold">1</div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <i class="fas fa-phone-volume text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Contact Us</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Call, visit our shop, or book online. We'll diagnose your issue and provide a quote.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-sm relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold">2</div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <i class="fas fa-tools text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Quick Repair</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Our certified technicians will repair your device using high-quality parts.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-sm relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold">3</div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <i class="fas fa-mobile-alt text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Ready to Go</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Pick up your fully repaired phone, good as new, with warranty coverage.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full mb-4">PRICING</span>
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Transparent Pricing</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Affordable repair prices with no hidden fees. Quality parts guaranteed.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="pricing-card bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Screen Replacement</h3>
+                        <div class="flex items-baseline mb-4">
+                            <span class="text-3xl font-bold text-primary">GHC 150</span>
+                            <span class="ml-1 text-gray-600 dark:text-gray-300">and up</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-600 dark:text-gray-300">High-quality screen</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-600 dark:text-gray-300">Professional installation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-600 dark:text-gray-300">30-day warranty</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 px-4 rounded-md font-medium transition duration-300">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="pricing-card bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border-2 border-primary relative">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-2 py-1 rounded-bl-lg">
+                        MOST POPULAR
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Battery Replacement</h3>
+                        <div class="flex items-baseline mb-4">
+                            <span class="text-3xl font-bold text-primary">GHC 120</span>
+                            <span class="ml-1 text-gray-600 dark:text-gray-300">and up</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-600 dark:text-gray-300">High-capacity battery</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-600 dark:text-gray-300">Professional installation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-600 dark:text-gray-300">6-month warranty</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 px-4 rounded-md font-medium transition duration-300">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="pricing-card bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Charging Port Repair</h3>
+                        <div class="flex items-baseline mb-4">
+                            <span class="text-3xl font-bold text-primary">GHC 100</span>
+                            <span class="ml-1 text-gray-600 dark:text-gray-300">and up</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-600 dark:text-gray-300">High-quality components</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-600 dark:text-gray-300">Professional installation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-600 dark:text-gray-300">3-month warranty</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full bg-primary hover:bg-blue-700 text-white text-center py-2 px-4 rounded-md font-medium transition duration-300">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <p class="text-gray-600 dark:text-gray-300">
+                    *Prices may vary depending on phone model. Contact us for exact pricing.
+                </p>
+                <a href="#contact" class="mt-4 inline-flex items-center text-primary font-medium hover:underline">
+                    Need a different service? Contact us
+                    <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accessories Section -->
+    <section id="accessories" class="py-16 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full mb-4">PRODUCTS</span>
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Quality Phone Accessories</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    We also offer premium accessories to protect and enhance your device.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white dark:bg-gray-700 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="h-40 bg-gray-100 dark:bg-gray-600 rounded-lg mb-4 flex items-center justify-center">
+                        <img src="hd1.jpg" 
+                             alt="Phone case" 
+                             class="h-32 object-contain">
+                    </div>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-1">Premium Cases</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">From GHC 30</p>
+                    <button class="w-full bg-primary hover:bg-blue-700 text-white py-1 px-3 rounded-md text-sm font-medium transition duration-300">
+                        Add to Cart
+                    </button>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-700 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="h-40 bg-gray-100 dark:bg-gray-600 rounded-lg mb-4 flex items-center justify-center">
+                        <img src="hd2.png" 
+                             alt="Screen protector" 
+                             class="h-32 object-contain">
+                    </div>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-1">Tempered Glass</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">From GHC 20</p>
+                    <button class="w-full bg-primary hover:bg-blue-700 text-white py-1 px-3 rounded-md text-sm font-medium transition duration-300">
+                        Add to Cart
+                    </button>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-700 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="h-40 bg-gray-100 dark:bg-gray-600 rounded-lg mb-4 flex items-center justify-center">
+                        <img src="hd3.jpg" 
+                             alt="Chargers" 
+                             class="h-32 object-contain">
+                    </div>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-1">Fast Chargers</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">From GHC 50</p>
+                    <button class="w-full bg-primary hover:bg-blue-700 text-white py-1 px-3 rounded-md text-sm font-medium transition duration-300">
+                        Add to Cart
+                    </button>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-700 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="h-40 bg-gray-100 dark:bg-gray-600 rounded-lg mb-4 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                             alt="Earphones" 
+                             class="h-32 object-contain">
+                    </div>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-1">Wireless Earphones</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">From GHC 80</p>
+                    <button class="w-full bg-primary hover:bg-blue-700 text-white py-1 px-3 rounded-md text-sm font-medium transition duration-300">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <a href="#contact" class="inline-flex items-center px-4 py-2 border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition duration-300">
+                    View All Accessories
+                    <i class="fas fa-chevron-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <span class="inline-block px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full mb-4">ABOUT US</span>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Lincoln Phones & Accessories</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Located in the heart of Kete Krachi, we've been providing top-quality phone repair services since 2015. Our team of certified technicians has the expertise to handle all your mobile device needs.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        We pride ourselves on using only high-quality parts and providing honest, transparent service. When you bring your device to us, you can trust that it's in good hands.
+                    </p>
+                    <div class="mt-6 grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Certified Technicians</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Quality Parts</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Fast Service</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Warranty Included</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg">
+                        <img src="hd5.png" 
+                             alt="Our repair shop" 
+                             class="w-full h-auto">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                            <h3 class="text-xl font-bold text-white">Visit Our Shop</h3>
+                            <p class="text-gray-200">Kete Krachi, near the main market</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 grid grid-cols-3 gap-4">
+                        <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-primary">8+</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-300">Years Experience</div>
+                        </div>
+                        <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-primary">3</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-300">Certified Techs</div>
+                        </div>
+                        <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-primary">98%</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-300">Success Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full mb-4">TESTIMONIALS</span>
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">What Our Customers Say</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Don't just take our word for it - hear from our satisfied customers.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white dark:bg-gray-700 rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Customer">
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900 dark:text-white">Ama Serwaa</p>
+                            <div class="flex space-x-1 text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        "My phone screen was completely shattered, but Lincoln Phones had it looking brand new in under an hour! Super professional and affordable."
+                    </p>
+                    <div class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+                        <i class="fas fa-calendar-alt mr-1"></i> 2 weeks ago
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white dark:bg-gray-700 rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/54.jpg" alt="Customer">
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900 dark:text-white">Kwame Mensah</p>
+                            <div class="flex space-x-1 text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        "I thought my phone was done for after it fell in water, but these guys brought it back to life. Highly recommend their water damage service!"
+                    </p>
+                    <div class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+                        <i class="fas fa-calendar-alt mr-1"></i> 1 month ago
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white dark:bg-gray-700 rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Customer">
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900 dark:text-white">Esi Boateng</p>
+                            <div class="flex space-x-1 text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        "Best phone repair shop in Kete Krachi! Fixed my charging port issue same day and the price was very reasonable. Will definitely come back."
+                    </p>
+                    <div class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+                        <i class="fas fa-calendar-alt mr-1"></i> 3 days ago
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <a href="#testimonials" class="inline-flex items-center px-4 py-2 border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition duration-300">
+                    Leave a Review
+                    <i class="fas fa-chevron-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Before & After -->
+<!-- Before & After -->
+<section class="py-16 bg-gray-50 dark:bg-gray-800">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Before & After</h2>
+      <p class="text-gray-600 dark:text-gray-300">See the transformation.</p>
+    </div>
+    <div class="max-w-3xl mx-auto relative overflow-hidden rounded-xl shadow-lg">
+      <img src="hd4.png" class="absolute w-full h-full object-cover opacity-50" />
+      <img src="hd4.png" class="relative w-full h-full object-cover" />
+    </div>
+</section>
+  
+    <!-- Brands Section -->
+    <section class="py-12 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h3 class="text-lg font-medium text-gray-600 dark:text-gray-300">We repair all major brands including:</h3>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <div class="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="h-8">
+                </div>
+                <div class="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung" class="h-8">
+                </div>
+                <div class="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Xiaomi_logo.svg" alt="Xiaomi" class="h-8">
+                </div>
+                <div class="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/LG_symbol.svg" alt="LG" class="h-8">
+                </div>
+                <div class="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Pixel" class="h-8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full mb-4">CONTACT</span>
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Get In Touch</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Have questions or need a repair? Get in touch with us today.
+                </p>
+            </div>
+            
+            <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8">
+                        <form id="contactForm" class="space-y-6" onsubmit="return handleSubmit(event)">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email (optional)</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white">
+                            </div>
+                            <div>
+                                <label for="service" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Service Needed</label>
+                                <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white" required>
+                                    <option value="">Select a service</option>
+                                    <option value="Screen Replacement">Screen Replacement</option>
+                                    <option value="Battery Replacement">Battery Replacement</option>
+                                    <option value="Charging Port Repair">Charging Port Repair</option>
+                                    <option value="Camera Repair">Camera Repair</option>
+                                    <option value="Water Damage Repair">Water Damage Repair</option>
+                                    <option value="Software Issues">Software Issues</option>
+                                    <option value="Accessories">Accessories</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-primary focus:border-primary dark:bg-gray-800 dark:text-white"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white py-2 px-4 rounded-md font-medium transition duration-300">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full mb-4">FAQ</span>
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Common questions about our phone repair services.
+                </p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div id="faq-accordion" class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
+                        <button type="button" class="w-full flex justify-between items-center p-6 faq-toggle focus:outline-none">
+                            <h3 class="font-bold text-gray-900 dark:text-white text-left">How long does a typical repair take?</h3>
+                            <span class="faq-arrow transition-transform duration-300">
+                                <svg class="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                            </span>
+                        </button>
+                        <div class="faq-content hidden p-6 pt-0 text-gray-600 dark:text-gray-300">
+                            Most common repairs like screen or battery replacements take about 30-60 minutes. More complex repairs may take longer, but we'll always give you an estimated time when you bring in your device. Many repairs can be completed while you wait!
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
+                        <button type="button" class="w-full flex justify-between items-center p-6 faq-toggle focus:outline-none">
+                            <h3 class="font-bold text-gray-900 dark:text-white text-left">Do you offer warranties on repairs?</h3>
+                            <span class="faq-arrow transition-transform duration-300">
+                                <svg class="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                            </span>
+                        </button>
+                        <div class="faq-content hidden p-6 pt-0 text-gray-600 dark:text-gray-300">
+                            Yes, we offer warranties on all our repairs and parts. Screen replacements come with a 30-day warranty, batteries have a 6-month warranty, and other repairs have a 3-month warranty. We stand behind our work and will fix any issues that arise during the warranty period.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
+                        <button type="button" class="w-full flex justify-between items-center p-6 faq-toggle focus:outline-none">
+                            <h3 class="font-bold text-gray-900 dark:text-white text-left">Do you use original parts?</h3>
+                            <span class="faq-arrow transition-transform duration-300">
+                                <svg class="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                            </span>
+                        </button>
+                        <div class="faq-content hidden p-6 pt-0 text-gray-600 dark:text-gray-300">
+                            We use high-quality OEM (Original Equipment Manufacturer) parts or premium aftermarket parts that meet or exceed original specifications. We'll always inform you about the parts we're using and their warranty coverage before starting any repair.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
+                        <button type="button" class="w-full flex justify-between items-center p-6 faq-toggle focus:outline-none">
+                            <h3 class="font-bold text-gray-900 dark:text-white text-left">What if my phone can't be repaired?</h3>
+                            <span class="faq-arrow transition-transform duration-300">
+                                <svg class="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                            </span>
+                        </button>
+                        <div class="faq-content hidden p-6 pt-0 text-gray-600 dark:text-gray-300">
+                            If we determine that your phone cannot be repaired, we'll explain why and provide you with options. We can help you recover your data and offer trade-in options for a new device. We also sell quality refurbished phones at competitive prices.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 5 -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
+                        <button type="button" class="w-full flex justify-between items-center p-6 faq-toggle focus:outline-none">
+                            <h3 class="font-bold text-gray-900 dark:text-white text-left">How much does a typical repair cost?</h3>
+                            <span class="faq-arrow transition-transform duration-300">
+                                <svg class="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                            </span>
+                        </button>
+                        <div class="faq-content hidden p-6 pt-0 text-gray-600 dark:text-gray-300">
+                            Repair costs vary depending on the phone model and the type of repair needed. Screen replacements, for example, start from GHC 150. For an exact quote, please contact us with your device details.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 6 -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
+                        <button type="button" class="w-full flex justify-between items-center p-6 faq-toggle focus:outline-none">
+                            <h3 class="font-bold text-gray-900 dark:text-white text-left">Will I lose my data during repair?</h3>
+                            <span class="faq-arrow transition-transform duration-300">
+                                <svg class="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                            </span>
+                        </button>
+                        <div class="faq-content hidden p-6 pt-0 text-gray-600 dark:text-gray-300">
+                            In most cases, your data will remain safe. However, for certain repairs (like severe water damage or motherboard issues), there is a risk of data loss. We recommend backing up your data before bringing in your device.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 7 -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
+                        <button type="button" class="w-full flex justify-between items-center p-6 faq-toggle focus:outline-none">
+                            <h3 class="font-bold text-gray-900 dark:text-white text-left">Do I need to book an appointment?</h3>
+                            <span class="faq-arrow transition-transform duration-300">
+                                <svg class="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                            </span>
+                        </button>
+                        <div class="faq-content hidden p-6 pt-0 text-gray-600 dark:text-gray-300">
+                            Walk-ins are always welcome! However, booking an appointment can help us serve you faster, especially during busy hours.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 8 -->
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
+                        <button type="button" class="w-full flex justify-between items-center p-6 faq-toggle focus:outline-none">
+                            <h3 class="font-bold text-gray-900 dark:text-white text-left">Can you repair water-damaged phones?</h3>
+                            <span class="faq-arrow transition-transform duration-300">
+                                <svg class="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                            </span>
+                        </button>
+                        <div class="faq-content hidden p-6 pt-0 text-gray-600 dark:text-gray-300">
+                            Yes! We have a high success rate with water-damaged phones. Bring your device in as soon as possible for the best chance of recovery.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Tips & Blog Section -->
+<section class="py-16 bg-white dark:bg-gray-900" id="blog">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Phone Tips & Tricks</h2>
+      <p class="text-gray-600 dark:text-gray-300">Helpful guides from the experts</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto px-4">
+      <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md">
+        <h3 class="text-lg font-bold text-primary mb-2">How to Spot a Failing Battery</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">Learn the early signs and avoid damage...</p>
+      </div>
+      <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md">
+        <h3 class="text-lg font-bold text-primary mb-2">Top 5 Accessories in 2025</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">Our favorite picks for iPhone & Samsung users...</p>
+      </div>
+      <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md">
+        <h3 class="text-lg font-bold text-primary mb-2">Quick Fixes You Can Try at Home</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">Before you bring it in, try these tips...</p>
+      </div>
+    </div>
+  </section>
+  
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-mobile-alt text-primary text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">Lincoln Phones</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Your trusted partner for phone repairs and accessories in Kete Krachi. Quality service, fair prices, and customer satisfaction guaranteed.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition duration-300">Pricing</a></li>
+                        <li><a href="#accessories" class="text-gray-400 hover:text-white transition duration-300">Accessories</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Screen Repair</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Battery Replacement</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Water Damage</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Software Issues</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Kete Krachi, near the main market
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            054 974 0645
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            dedelincoln@gmail.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 Lincoln Phones & Accessories. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Preline
+            HSAccordion.autoInit();
+
+            // Theme toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
+            const icon = themeToggle.querySelector('i');
+
+            // Check for saved theme preference or use system preference
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                html.classList.add('dark');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                icon.classList.remove('text-gray-700');
+                icon.classList.add('text-yellow-300');
+            } else {
+                html.classList.remove('dark');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                icon.classList.remove('text-yellow-300');
+                icon.classList.add('text-gray-700');
+            }
+
+            // Toggle theme on button click
+            themeToggle.addEventListener('click', () => {
+                if (html.classList.contains('dark')) {
+                    html.classList.remove('dark');
+                    localStorage.theme = 'light';
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                    icon.classList.remove('text-yellow-300');
+                    icon.classList.add('text-gray-700');
+                } else {
+                    html.classList.add('dark');
+                    localStorage.theme = 'dark';
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                    icon.classList.remove('text-yellow-300');
+                    icon.classList.add('text-gray-700');
+                }
+            });
+
+            // Listen for system theme changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                if (!('theme' in localStorage)) {
+                    if (e.matches) {
+                        html.classList.add('dark');
+                        icon.classList.remove('fa-moon');
+                        icon.classList.add('fa-sun');
+                        icon.classList.remove('text-gray-700');
+                        icon.classList.add('text-yellow-300');
+                    } else {
+                        html.classList.remove('dark');
+                        icon.classList.remove('fa-sun');
+                        icon.classList.add('fa-moon');
+                        icon.classList.remove('text-yellow-300');
+                        icon.classList.add('text-gray-700');
+                    }
+                }
+            });
+
+            // Stats counter animation
+            const counters = document.querySelectorAll('.stats-counter');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000; // 2 seconds
+                const step = target / (duration / 16); // 60fps
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += step;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                // Start animation when element is in view
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCounter();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                
+                observer.observe(counter);
+            });
+            
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // Add your form submission logic here
+                    alert('Thank you for your message! We will get back to you soon.');
+                    contactForm.reset();
+                });
+            }
+        });
+
+        // FAQ accordion toggle
+        document.querySelectorAll('.faq-toggle').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const content = this.parentElement.querySelector('.faq-content');
+                const arrow = this.querySelector('.faq-arrow');
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    arrow.classList.add('rotate-180');
+                } else {
+                    content.classList.add('hidden');
+                    arrow.classList.remove('rotate-180');
+                }
+            });
+        });
+
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Collect form data
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            // Generate unique receipt code
+            const timestamp = new Date().getTime();
+            const randomNum = Math.floor(Math.random() * 1000);
+            const receiptCode = `LIN-${timestamp}-${randomNum}`;
+
+            // Create PDF using jsPDF
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            // Add company logo
+            const logo = new Image();
+            logo.src = 'logo.png';
+            
+            // Set up PDF styling
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(20);
+            doc.setTextColor(59, 130, 246); // Primary blue color
+            
+            // Add company name
+            doc.text("LINCOLN PHONES", 105, 20, { align: "center" });
+            
+            // Add logo
+            doc.addImage(logo, 'PNG', 85, 25, 40, 40);
+            
+            // Add receipt details
+            doc.setFontSize(12);
+            doc.setTextColor(0, 0, 0);
+            
+            // Receipt code and date
+            doc.setFont("helvetica", "bold");
+            doc.text("Receipt Code:", 20, 80);
+            doc.setFont("helvetica", "normal");
+            doc.text(receiptCode, 70, 80);
+            
+            doc.setFont("helvetica", "bold");
+            doc.text("Date:", 20, 90);
+            doc.setFont("helvetica", "normal");
+            doc.text(new Date().toLocaleString(), 70, 90);
+            
+            // Customer details
+            doc.setFont("helvetica", "bold");
+            doc.text("Customer Details:", 20, 110);
+            doc.setFont("helvetica", "normal");
+            
+            doc.text("Name:", 20, 120);
+            doc.text(name, 70, 120);
+            
+            doc.text("Phone:", 20, 130);
+            doc.text(phone, 70, 130);
+            
+            doc.text("Email:", 20, 140);
+            doc.text(email || "N/A", 70, 140);
+            
+            // Service details
+            doc.setFont("helvetica", "bold");
+            doc.text("Service Details:", 20, 160);
+            doc.setFont("helvetica", "normal");
+            
+            doc.text("Service Required:", 20, 170);
+            doc.text(service, 70, 170);
+            
+            if (message) {
+                doc.text("Message:", 20, 180);
+                doc.text(message, 70, 180);
+            }
+            
+            // Add footer
+            doc.setFont("helvetica", "italic");
+            doc.setFontSize(10);
+            doc.text("Thank you for choosing Lincoln Phones!", 105, 250, { align: "center" });
+            doc.text("Please keep this receipt for your records.", 105, 255, { align: "center" });
+            
+            // Add contact information
+            doc.setFont("helvetica", "normal");
+            doc.text("Contact: 054 974 0645", 105, 265, { align: "center" });
+            doc.text("Location: Kete Krachi, near the main market", 105, 270, { align: "center" });
+            
+            // Save the PDF
+            doc.save(`lincoln_receipt_${receiptCode}.pdf`);
+
+            // Prepare WhatsApp message
+            const whatsappMessage = encodeURIComponent(
+                `Receipt Code: ${receiptCode}\n` +
+                `Name: ${name}\n` +
+                `Phone: ${phone}\n` +
+                `Email: ${email || "N/A"}\n` +
+                `Service: ${service}\n` +
+                `Message: ${message || "N/A"}`
+            );
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=233549740645&text=${whatsappMessage}`;
+
+            // Open WhatsApp
+            window.open(whatsappUrl, '_blank');
+
+            // Reset form
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</body>
+</html>
